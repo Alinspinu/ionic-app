@@ -1,0 +1,7 @@
+{
+  "root": "dist/Faq-front",
+  "clean_urls": true,
+  "routes": {
+    "/**": "index.html"
+  }
+}

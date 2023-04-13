@@ -1,0 +1,7 @@
+{
+  "name": "Faq-front",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

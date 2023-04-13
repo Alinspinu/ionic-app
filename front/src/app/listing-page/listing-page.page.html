@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ion-text-center">
+    <ion-buttons slot="start">
+      <ion-menu-button menu="m1"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listing Q&A</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3" *ngFor="let item of documents; let i= index" class="ion-no-margin">
+        <ion-card class="ion-no-margin" (click)="toEdit(i)" routerLink="/update-page">
+          <ion-card-header class="ion-no-padding ion-padding-top ion-padding-start">
+            <ion-card-subtitle>Question</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            {{item.question}}
+          </ion-card-content>
+          <ion-card-header class="ion-no-padding ion-padding-start">
+            <ion-card-subtitle>Answer</ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            {{item.answer}}
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
